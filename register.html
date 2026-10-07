@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Registration | Bharat Web Solutions Multi-Gateway Cloud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+  <!-- Top Enterprise & Government Portal Header -->
+  <div class="bws-topbar">
+    <div class="bws-topbar-content">
+      <div class="bws-topbar-left">
+        <span class="gov-badge-seal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+          ORGANIZATION ONBOARDING
+        </span>
+        <span>भारत सरकार क्लाउड मानकों के अनुरूप | Enterprise WhatsApp API Infrastructure</span>
+      </div>
+      <div class="bws-topbar-right">
+        <span>ISO 27001 Certified Grid</span>
+        <span>•</span>
+        <span>Instant Sandbox Provisioning</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimal Brand Header -->
+  <header style="padding: 16px 20px; border-bottom: 1px solid var(--border-color); background: rgba(11, 30, 61, 0.95); backdrop-filter: blur(10px);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="bws-logo-group" style="text-decoration: none;">
+        <div class="bws-logo-emblem">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 4L7 11.5v13.8c0 10.9 7.3 21.1 17 23.7 9.7-2.6 17-12.8 17-23.7V11.5L24 4z" fill="#0E2344" stroke="#F58220" stroke-width="2"/>
+            <circle cx="24" cy="23" r="10.5" stroke="#3B82F6" stroke-width="1.8" stroke-dasharray="2 2"/>
+            <circle cx="24" cy="23" r="4.5" fill="#F58220"/>
+            <path d="M24 16c-3.9 0-7 3.1-7 7 0 1.3.4 2.5 1 3.5L17 30l3.7-1c1 .5 2.1.8 3.3.8 3.9 0 7-3.1 7-7s-3.1-6.8-7-6.8z" fill="#10B981" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="bws-brand-text">
+          <h1>Bharat Web Solutions</h1>
+          <p>National Multi-Gateway WhatsApp API Cloud</p>
+        </div>
+      </a>
+
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <a href="login.html" class="bws-nav-btn bws-nav-btn-primary" style="font-size: 0.85rem; padding: 8px 14px;">
+          🔐 Existing Client Login
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Registration Main Container -->
+  <main class="auth-container" style="max-width: 740px;">
+    <div class="auth-card" style="padding: clamp(24px, 5vw, 36px);">
+      
+      <!-- Top Header -->
+      <div class="auth-header">
+        <div class="gov-ashok-emblem">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F58220" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <line x1="20" y1="8" x2="20" y2="14"></line>
+            <line x1="23" y1="11" x2="17" y2="11"></line>
+          </svg>
+        </div>
+        <h2 class="auth-title">Enterprise &amp; Developer Registration</h2>
+        <p class="auth-subtitle">
+          Provision your Multi-Gateway WhatsApp API key, cPanel microservice credentials, and sandbox instances.
+        </p>
+      </div>
+
+      <!-- Quick Fill Sample Organization Button -->
+      <div style="background: rgba(15, 39, 74, 0.7); border: 1px dashed var(--border-color); border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <span style="font-size: 0.85rem; color: var(--text-secondary);">Want to quickly test registration?</span>
+        <button type="button" class="btn btn-outline" style="padding: 4px 12px; font-size: 0.8rem;" onclick="fillSampleRegistration()">
+          ⚡ Auto-Fill Sample Enterprise Data
+        </button>
+      </div>
+
+      <!-- Status Alert Box -->
+      <div id="reg-alert-box" style="display: none; padding: 12px 16px; border-radius: var(--radius-sm); margin-bottom: 20px; font-size: 0.88rem; line-height: 1.4;"></div>
+
+      <!-- Registration Form -->
+      <form id="client-reg-form" onsubmit="handleRegistrationSubmit(event)">
+        
+        <!-- SECTION 1: ORGANIZATION / ENTITY DETAILS -->
+        <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 20px;">
+          <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--accent-saffron);">01.</span> Organization &amp; Legal Classification
+          </h3>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="reg-org-name">Legal Entity / Organization Name *</label>
+              <input type="text" class="form-control" id="reg-org-name" placeholder="e.g. Bharat Logistics Ltd. or NIC Dept" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-org-type">Entity Type *</label>
+              <select class="form-control" id="reg-org-type">
+                <option value="pvt_ltd">Private Limited / Public Limited</option>
+                <option value="govt_body">Government Body / State Agency / PSU</option>
+                <option value="fintech">Fintech / Bank / NBFC Institution</option>
+                <option value="llp">LLP / Partnership / MSME</option>
+                <option value="developer">Individual Software Developer</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="reg-gstin">GSTIN / Govt Nodal Identifier (Optional)</label>
+              <input type="text" class="form-control" id="reg-gstin" placeholder="07AAAAA0000A1Z5 / NIC-GOV-ID">
+              <div class="form-hint">Enables enterprise GST tax invoice input credit.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-state">State / Union Territory *</label>
+              <select class="form-control" id="reg-state">
+                <option value="DL">Delhi (NCT)</option>
+                <option value="MH">Maharashtra</option>
+                <option value="KA">Karnataka</option>
+                <option value="TN">Tamil Nadu</option>
+                <option value="UP">Uttar Pradesh</option>
+                <option value="GJ">Gujarat</option>
+                <option value="WB">West Bengal</option>
+                <option value="OTHER">Other Indian State / UT</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: NODAL CONTACT & WHATSAPP PHONE -->
+        <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 20px;">
+          <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--accent-saffron);">02.</span> Primary Nodal Contact &amp; WhatsApp Mobile
+          </h3>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="reg-contact-name">Nodal Officer / Developer Name *</label>
+              <input type="text" class="form-control" id="reg-contact-name" placeholder="e.g. Vikram Sharma" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-email">Official Email Address *</label>
+              <input type="email" class="form-control" id="reg-email" placeholder="vikram@bharatlogistics.in" required>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="reg-phone">WhatsApp Verified Mobile (+91) *</label>
+              <input type="text" class="form-control" id="reg-phone" placeholder="+91 98765 43210" required>
+              <div class="form-hint">Used for 2FA login verification and security alerts.</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-infra">Target Hosting Architecture *</label>
+              <select class="form-control" id="reg-infra">
+                <option value="cpanel">cPanel Shared Hosting (PHP 8.2 + Node Selector)</option>
+                <option value="vps">Dedicated Linux VPS (Ubuntu / Rocky Linux)</option>
+                <option value="cloud">Bharat Web Solutions Managed Cloud Grid</option>
+                <option value="onpremise">On-Premises Air-Gapped Deployment</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: GATEWAY TIER SELECTION -->
+        <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 20px;">
+          <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--accent-saffron);">03.</span> Select Initial WhatsApp Gateway Plan
+          </h3>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+            
+            <label style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; background: rgba(14, 35, 68, 0.4); cursor: pointer; display: block; position: relative;">
+              <input type="radio" name="tier_plan" value="sandbox" checked style="accent-color: var(--accent-saffron);">
+              <strong style="color: #ffffff; display: block; margin-top: 6px; font-size: 0.95rem;">Developer Sandbox</strong>
+              <div style="color: var(--accent-success); font-weight: 700; margin: 4px 0;">₹0 Free Trial</div>
+              <div style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.4;">
+                1 Gateway Instance • 10,000 Sandbox msgs • Full cPanel PHP microservices SDK
+              </div>
+            </label>
+
+            <label style="border: 1px solid var(--accent-saffron); border-radius: var(--radius-sm); padding: 14px; background: rgba(245, 130, 32, 0.08); cursor: pointer; display: block; position: relative;">
+              <span class="badge" style="position: absolute; right: 10px; top: 10px; background: var(--accent-saffron); color: #ffffff;">POPULAR</span>
+              <input type="radio" name="tier_plan" value="enterprise" style="accent-color: var(--accent-saffron);">
+              <strong style="color: #ffffff; display: block; margin-top: 6px; font-size: 0.95rem;">Enterprise Multi-Gate</strong>
+              <div style="color: var(--accent-saffron); font-weight: 700; margin: 4px 0;">₹2,499 / mo</div>
+              <div style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.4;">
+                4 Gateway Instances (Alpha/Beta/Gamma/Delta) • 500k messages • Smart Failover
+              </div>
+            </label>
+
+            <label style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; background: rgba(14, 35, 68, 0.4); cursor: pointer; display: block; position: relative;">
+              <input type="radio" name="tier_plan" value="govt" style="accent-color: var(--accent-saffron);">
+              <strong style="color: #ffffff; display: block; margin-top: 6px; font-size: 0.95rem;">Govt &amp; Mission SLA</strong>
+              <div style="color: #60a5fa; font-weight: 700; margin: 4px 0;">Custom RFP</div>
+              <div style="color: var(--text-secondary); font-size: 0.8rem; line-height: 1.4;">
+                Dedicated cluster • Data localization compliance • 99.99% priority SLA
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- SECTION 4: SECURITY CREDENTIALS -->
+        <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 20px;">
+          <h3 style="font-size: 1.05rem; color: #ffffff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+            <span style="color: var(--accent-saffron);">04.</span> Master Account Access Credentials
+          </h3>
+
+          <div class="grid-2">
+            <div class="form-group">
+              <label class="form-label" for="reg-password">Create Master Password *</label>
+              <input type="password" class="form-control" id="reg-password" placeholder="At least 8 characters" required oninput="checkPasswordStrength()">
+              <div id="pwd-strength" style="font-size: 0.78rem; margin-top: 4px; color: var(--text-secondary);">Strength: —</div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-confirm-password">Confirm Master Password *</label>
+              <input type="password" class="form-control" id="reg-confirm-password" placeholder="Re-enter password" required>
+            </div>
+          </div>
+
+          <!-- Instant Sandbox Key Generator Box -->
+          <div style="background: rgba(14, 35, 68, 0.6); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; margin-top: 10px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <span style="font-size: 0.85rem; font-weight: 600; color: #ffffff;">Auto-Provisioned Sandbox API Key:</span>
+              <button type="button" class="btn btn-outline" style="padding: 2px 8px; font-size: 0.75rem;" onclick="regenerateSandboxKey()">
+                🔄 Regenerate
+              </button>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" class="form-control" id="sandbox-key-preview" readonly style="font-family: monospace; font-size: 0.85rem; color: var(--accent-saffron); background: #061021;" value="BWS_SANDBOX_LIVE_98A401FB7492">
+            </div>
+            <div class="form-hint">This key will be instantly activated upon completion of registration.</div>
+          </div>
+
+        </div>
+
+        <!-- Terms Agreement -->
+        <div class="form-group" style="margin-top: 14px;">
+          <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: var(--text-secondary); cursor: pointer;">
+            <input type="checkbox" id="check-terms" required style="margin-top: 3px; accent-color: var(--accent-saffron); width: 16px; height: 16px;">
+            <span>
+              I agree to the <strong style="color: var(--text-primary);">Bharat Web Solutions Enterprise Master Service Agreement</strong> and confirm compliance with the Telecom Commercial Communications Customer Preference Regulations (TCCCPR) and Digital Personal Data Protection Act 2023.
+            </span>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="margin-top: 24px;">
+          <button type="submit" class="btn btn-primary" id="btn-register" style="width: 100%; justify-content: center; padding: 14px; font-size: 1.05rem;">
+            🚀 Complete Onboarding &amp; Provision Gateway Cluster
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Footer Link to Login -->
+      <div class="auth-footer">
+        <p style="margin-bottom: 0;">
+          Already have an enterprise client account? 
+          <a href="login.html" class="auth-link">Sign In to Client Portal</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Security & Compliance Seal -->
+    <div style="max-width: 600px; margin: 24px auto 0; text-align: center;">
+      <div class="security-seal-badge" style="justify-content: center; display: inline-flex;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+        <span>ISO 27001:2022 CERTIFIED • ZERO THIRD-PARTY CLOUD LEAKAGE</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Registration Script Logic -->
+  <script>
+    // Regenerate sandbox key preview
+    function regenerateSandboxKey() {
+      const hex = Array.from({length: 12}, () => Math.floor(Math.random() * 16).toString(16)).join('').toUpperCase();
+      document.getElementById('sandbox-key-preview').value = `BWS_SANDBOX_LIVE_${hex}`;
+    }
+
+    // Password strength check
+    function checkPasswordStrength() {
+      const pwd = document.getElementById('reg-password').value;
+      const strengthEl = document.getElementById('pwd-strength');
+      if (!pwd) {
+        strengthEl.innerText = 'Strength: —';
+        strengthEl.style.color = 'var(--text-secondary)';
+        return;
+      }
+      if (pwd.length < 6) {
+        strengthEl.innerText = 'Strength: Weak (Minimum 8 chars recommended)';
+        strengthEl.style.color = 'var(--accent-danger)';
+      } else if (pwd.length < 10) {
+        strengthEl.innerText = 'Strength: Medium (Good)';
+        strengthEl.style.color = 'var(--accent-saffron)';
+      } else {
+        strengthEl.innerText = 'Strength: Strong (Enterprise Grade)';
+        strengthEl.style.color = 'var(--accent-success)';
+      }
+    }
+
+    // Auto-fill sample enterprise data
+    function fillSampleRegistration() {
+      document.getElementById('reg-org-name').value = 'Bharat LogiTech Solutions Pvt Ltd';
+      document.getElementById('reg-org-type').value = 'pvt_ltd';
+      document.getElementById('reg-gstin').value = '07AAACB2194P1Z4';
+      document.getElementById('reg-state').value = 'DL';
+      document.getElementById('reg-contact-name').value = 'Rajesh Verma';
+      document.getElementById('reg-email').value = 'rajesh.verma@bharatlogitech.in';
+      document.getElementById('reg-phone').value = '+91 98101 23456';
+      document.getElementById('reg-infra').value = 'cpanel';
+      document.getElementById('reg-password').value = 'BharatPass@2025#';
+      document.getElementById('reg-confirm-password').value = 'BharatPass@2025#';
+      document.getElementById('check-terms').checked = true;
+      checkPasswordStrength();
+
+      showRegAlert('Sample Enterprise data filled! You can click "Complete Onboarding" to test.', 'info');
+    }
+
+    // Show custom reg alert
+    function showRegAlert(msg, type = 'info') {
+      const box = document.getElementById('reg-alert-box');
+      box.style.display = 'block';
+      if (type === 'error') {
+        box.style.background = 'rgba(239, 68, 68, 0.15)';
+        box.style.border = '1px solid var(--accent-danger)';
+        box.style.color = '#fca5a5';
+      } else if (type === 'success') {
+        box.style.background = 'rgba(16, 185, 129, 0.15)';
+        box.style.border = '1px solid var(--accent-success)';
+        box.style.color = '#a7f3d0';
+      } else {
+        box.style.background = 'rgba(59, 130, 246, 0.15)';
+        box.style.border = '1px solid #3b82f6';
+        box.style.color = '#bfdbfe';
+      }
+      box.innerText = msg;
+    }
+
+    // Handle form submit
+    function handleRegistrationSubmit(event) {
+      event.preventDefault();
+
+      const pwd = document.getElementById('reg-password').value;
+      const confirmPwd = document.getElementById('reg-confirm-password').value;
+      const terms = document.getElementById('check-terms').checked;
+      const btn = document.getElementById('btn-register');
+
+      if (pwd !== confirmPwd) {
+        showRegAlert('Password and Confirm Password do not match. Please verify.', 'error');
+        return;
+      }
+
+      if (!terms) {
+        showRegAlert('Please accept the Master Service Agreement and data protection terms.', 'error');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '⚙️ Provisioning Multi-Gateway Sandbox Cluster...';
+
+      setTimeout(() => {
+        const apiKey = document.getElementById('sandbox-key-preview').value;
+        const orgName = document.getElementById('reg-org-name').value;
+        showRegAlert(`Account Provisioned Successfully! Assigned API Key: ${apiKey} for ${orgName}. Redirecting to Client Login...`, 'success');
+        btn.innerHTML = '✓ Cluster Ready! Redirecting...';
+        btn.style.background = 'var(--accent-success)';
+
+        setTimeout(() => {
+          window.location.href = 'login.html';
+        }, 1800);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

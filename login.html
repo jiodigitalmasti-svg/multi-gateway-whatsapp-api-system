@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal Login | Bharat Web Solutions Multi-Gateway Cloud</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+  <!-- Top Enterprise & Government Portal Header -->
+  <div class="bws-topbar">
+    <div class="bws-topbar-content">
+      <div class="bws-topbar-left">
+        <span class="gov-badge-seal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+          SECURE CLIENT PORTAL
+        </span>
+        <span id="portal-top-banner">भारत सरकार क्लाउड मानकों के अनुरूप | Enterprise WhatsApp API Infrastructure</span>
+      </div>
+      <div class="bws-topbar-right">
+        <button class="lang-switch-btn" onclick="toggleLanguage()" id="lang-btn">हिन्दी / English</button>
+        <span>•</span>
+        <span>256-Bit TLS Secured</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimal Brand Header -->
+  <header style="padding: 16px 20px; border-bottom: 1px solid var(--border-color); background: rgba(11, 30, 61, 0.95); backdrop-filter: blur(10px);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" class="bws-logo-group" style="text-decoration: none;">
+        <div class="bws-logo-emblem">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 4L7 11.5v13.8c0 10.9 7.3 21.1 17 23.7 9.7-2.6 17-12.8 17-23.7V11.5L24 4z" fill="#0E2344" stroke="#F58220" stroke-width="2"/>
+            <circle cx="24" cy="23" r="10.5" stroke="#3B82F6" stroke-width="1.8" stroke-dasharray="2 2"/>
+            <circle cx="24" cy="23" r="4.5" fill="#F58220"/>
+            <path d="M24 16c-3.9 0-7 3.1-7 7 0 1.3.4 2.5 1 3.5L17 30l3.7-1c1 .5 2.1.8 3.3.8 3.9 0 7-3.1 7-7s-3.1-6.8-7-6.8z" fill="#10B981" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="bws-brand-text">
+          <h1>Bharat Web Solutions</h1>
+          <p>National Multi-Gateway WhatsApp API Cloud</p>
+        </div>
+      </a>
+
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <a href="index.html" class="bws-nav-btn bws-nav-btn-secondary" style="font-size: 0.85rem; padding: 8px 14px;">
+          ← Return to Main Portal
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Container -->
+  <main class="auth-container">
+    <div class="auth-card">
+      
+      <!-- Top Emblem & Card Header -->
+      <div class="auth-header">
+        <div class="gov-ashok-emblem">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F58220" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="M12 8v4"/>
+            <path d="M12 16h.01"/>
+          </svg>
+        </div>
+        <h2 class="auth-title" id="auth-title-text">Official Client Portal Login</h2>
+        <p class="auth-subtitle" id="auth-sub-text">
+          Access your Multi-Gateway WhatsApp API Console, API Tokens, Webhooks, and Billing
+        </p>
+      </div>
+
+      <!-- Quick Test Fill Buttons -->
+      <div style="background: rgba(15, 39, 74, 0.7); border: 1px dashed var(--border-color); border-radius: var(--radius-sm); padding: 10px 14px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <span style="font-size: 0.82rem; color: var(--text-secondary);">Demo Sandbox Profiles:</span>
+        <div style="display: flex; gap: 8px;">
+          <button type="button" class="btn btn-outline" style="padding: 4px 10px; font-size: 0.78rem;" onclick="fillDemo('client')">
+            🏢 Enterprise Client
+          </button>
+          <button type="button" class="btn btn-outline" style="padding: 4px 10px; font-size: 0.78rem;" onclick="fillDemo('govt')">
+            🏛️ Govt Agency
+          </button>
+        </div>
+      </div>
+
+      <!-- Alert / Status Notice Box -->
+      <div id="login-alert-box" style="display: none; padding: 12px 16px; border-radius: var(--radius-sm); margin-bottom: 18px; font-size: 0.88rem; line-height: 1.4;"></div>
+
+      <!-- Login Form -->
+      <form id="client-login-form" onsubmit="handleLoginSubmit(event)">
+        
+        <!-- Account / Tier Type -->
+        <div class="form-group">
+          <label class="form-label" for="login-tier" id="lbl-tier">Account Classification</label>
+          <select class="form-control" id="login-tier">
+            <option value="enterprise">Enterprise WhatsApp API Client (Multi-Gateway)</option>
+            <option value="govt">Government Agency / PSU Department</option>
+            <option value="fintech">Fintech &amp; Banking OTP Dispatcher</option>
+            <option value="developer">Registered Developer Sandbox</option>
+          </select>
+        </div>
+
+        <!-- Client ID / Mobile / Email -->
+        <div class="form-group">
+          <label class="form-label" for="login-identifier" id="lbl-id">Client ID / Registered Mobile / Email</label>
+          <div style="position: relative;">
+            <input type="text" class="form-control" id="login-identifier" placeholder="e.g. BWS-ENT-88492 or admin@agency.gov.in" required>
+            <span style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--text-secondary); pointer-events: none;">
+              👤
+            </span>
+          </div>
+          <div class="form-hint" id="hint-id">Use your registered Bharat Web Solutions account identifier.</div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <label class="form-label" for="login-password" style="margin-bottom: 0;" id="lbl-pwd">Account Access Key / Password</label>
+            <a href="forgot-password.html" style="font-size: 0.82rem; color: var(--accent-saffron); text-decoration: none;">Forgot Password?</a>
+          </div>
+          <div style="position: relative;">
+            <input type="password" class="form-control" id="login-password" placeholder="••••••••••••" required style="padding-right: 44px;">
+            <button type="button" onclick="togglePasswordVisibility()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: transparent; border: none; color: var(--text-secondary); cursor: pointer; padding: 4px; font-size: 1rem;">
+              👁️
+            </button>
+          </div>
+        </div>
+
+        <!-- 2FA WhatsApp Verification Checkbox -->
+        <div class="form-group" style="margin-top: 14px;">
+          <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; color: var(--text-secondary); cursor: pointer;">
+            <input type="checkbox" id="check-2fa" checked style="margin-top: 3px; accent-color: var(--accent-saffron); width: 16px; height: 16px;">
+            <span>
+              <strong style="color: var(--text-primary);">Enable WhatsApp 2FA Dispatch</strong>
+              <br>Verify login session via an instant one-time PIN sent to your linked WhatsApp number.
+            </span>
+          </label>
+        </div>
+
+        <!-- Math Security CAPTCHA -->
+        <div class="form-group" style="background: rgba(14, 35, 68, 0.4); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 12px 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-size: 0.82rem; color: var(--text-secondary); font-weight: 500;">Security Human Verification:</span>
+            <button type="button" class="btn btn-outline" style="padding: 2px 8px; font-size: 0.75rem;" onclick="generateCaptcha()">
+              🔄 Refresh Code
+            </button>
+          </div>
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <div id="captcha-display" style="background: #061124; border: 1px solid var(--accent-saffron); border-radius: 4px; padding: 6px 14px; font-family: monospace; font-size: 1.15rem; font-weight: 700; letter-spacing: 4px; color: var(--accent-saffron); user-select: none;">
+              7 + 5 = ?
+            </div>
+            <input type="text" class="form-control" id="captcha-input" placeholder="Result" style="max-width: 120px;" required>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="margin-top: 22px;">
+          <button type="submit" class="btn btn-primary" id="btn-login" style="width: 100%; justify-content: center; padding: 12px; font-size: 1rem;">
+            🔐 Secure Client Sign In
+          </button>
+        </div>
+
+        <!-- Two-Factor OTP Interactive Modal Container (Hidden by default) -->
+        <div id="otp-modal-section" style="display: none; margin-top: 20px; background: rgba(15, 39, 74, 0.9); border: 1px solid var(--accent-success); border-radius: var(--radius-md); padding: 18px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+            <span style="color: var(--accent-success); font-size: 1.2rem;">📱</span>
+            <strong style="color: #ffffff; font-size: 0.95rem;">Enter WhatsApp 2FA One-Time PIN</strong>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
+            A 6-digit security code was dispatched via Gateway Alpha to your linked number <strong style="color: var(--accent-saffron);">+91 •••••••210</strong>.
+          </p>
+          <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+            <input type="text" class="form-control" id="otp-input" placeholder="e.g. 529184" maxlength="6" style="text-align: center; letter-spacing: 6px; font-size: 1.2rem; font-weight: bold;">
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button type="button" class="btn btn-primary" style="flex: 1;" onclick="verifyOtpAndProceed()">
+              ✓ Verify &amp; Launch Console
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="simulateResendOtp()">
+              Resend OTP
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Footer Links -->
+      <div class="auth-footer">
+        <p style="margin-bottom: 10px;">
+          Don't have an enterprise account? 
+          <a href="register.html" class="auth-link">Register New Account</a>
+        </p>
+        <p style="margin-bottom: 0;">
+          Need password reset? 
+          <a href="forgot-password.html" class="auth-link">Official Account Recovery</a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Security & Compliance Seal -->
+    <div style="max-width: 520px; margin: 24px auto 0; text-align: center;">
+      <div class="security-seal-badge" style="justify-content: center; display: inline-flex;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <span>PROTECTED BY NATIONAL ENCRYPTION STANDARDS • MEITY COMPLIANT</span>
+      </div>
+      <p style="color: #64748b; font-size: 0.78rem; margin-top: 10px; line-height: 1.5;">
+        Unauthorized access attempts to Bharat Web Solutions multi-gateway API nodes are monitored and logged pursuant to Sections 43 &amp; 66 of the Information Technology Act 2000.
+      </p>
+    </div>
+  </main>
+
+  <!-- Login Logic & Simulation Script -->
+  <script>
+    let captchaAnswer = 0;
+    let isHindi = false;
+
+    // Generate random math captcha
+    function generateCaptcha() {
+      const a = Math.floor(Math.random() * 12) + 3;
+      const b = Math.floor(Math.random() * 9) + 2;
+      captchaAnswer = a + b;
+      const display = document.getElementById('captcha-display');
+      if (display) {
+        display.innerText = `${a} + ${b} = ?`;
+      }
+      const input = document.getElementById('captcha-input');
+      if (input) input.value = '';
+    }
+
+    // Toggle Password Visibility
+    function togglePasswordVisibility() {
+      const pwd = document.getElementById('login-password');
+      if (pwd.type === 'password') {
+        pwd.type = 'text';
+      } else {
+        pwd.type = 'password';
+      }
+    }
+
+    // Quick Fill Demo profiles
+    function fillDemo(type) {
+      const idInput = document.getElementById('login-identifier');
+      const pwdInput = document.getElementById('login-password');
+      const tierSelect = document.getElementById('login-tier');
+      const captchaInput = document.getElementById('captcha-input');
+
+      if (type === 'client') {
+        idInput.value = 'BWS-ENT-88492';
+        pwdInput.value = 'EnterprisePass@2025';
+        tierSelect.value = 'enterprise';
+      } else {
+        idInput.value = 'nodal.officer@nic.bws.gov.in';
+        pwdInput.value = 'GovtAuthSecret#442';
+        tierSelect.value = 'govt';
+      }
+
+      captchaInput.value = captchaAnswer;
+
+      showAlert('Demo credentials filled for ' + (type === 'client' ? 'Enterprise Client' : 'Government Agency') + '. Click "Secure Client Sign In".', 'info');
+    }
+
+    // Show custom alert
+    function showAlert(msg, type = 'info') {
+      const box = document.getElementById('login-alert-box');
+      box.style.display = 'block';
+      if (type === 'error') {
+        box.style.background = 'rgba(239, 68, 68, 0.15)';
+        box.style.border = '1px solid var(--accent-danger)';
+        box.style.color = '#fca5a5';
+      } else if (type === 'success') {
+        box.style.background = 'rgba(16, 185, 129, 0.15)';
+        box.style.border = '1px solid var(--accent-success)';
+        box.style.color = '#a7f3d0';
+      } else {
+        box.style.background = 'rgba(59, 130, 246, 0.15)';
+        box.style.border = '1px solid #3b82f6';
+        box.style.color = '#bfdbfe';
+      }
+      box.innerText = msg;
+    }
+
+    // Handle form submit
+    function handleLoginSubmit(event) {
+      event.preventDefault();
+      const identifier = document.getElementById('login-identifier').value.trim();
+      const password = document.getElementById('login-password').value.trim();
+      const captchaVal = parseInt(document.getElementById('captcha-input').value.trim(), 10);
+      const is2FA = document.getElementById('check-2fa').checked;
+      const btn = document.getElementById('btn-login');
+
+      // Validate captcha
+      if (captchaVal !== captchaAnswer) {
+        showAlert('Security verification code is incorrect. Please recheck the math sum.', 'error');
+        generateCaptcha();
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '🔄 Authenticating with Node Gateway Cluster...';
+
+      setTimeout(() => {
+        if (is2FA) {
+          btn.innerHTML = 'Waiting for 2FA Verification...';
+          showAlert('Primary credentials accepted. An authentication OTP has been sent via WhatsApp to your registered device.', 'success');
+          document.getElementById('otp-modal-section').style.display = 'block';
+          document.getElementById('otp-input').value = '529184';
+          document.getElementById('otp-input').focus();
+        } else {
+          loginSuccess();
+        }
+      }, 700);
+    }
+
+    // Verify OTP & Proceed
+    function verifyOtpAndProceed() {
+      const otp = document.getElementById('otp-input').value.trim();
+      if (!otp || otp.length < 4) {
+        showAlert('Please enter the valid OTP code received on WhatsApp.', 'error');
+        return;
+      }
+      loginSuccess();
+    }
+
+    // Simulate Resend OTP
+    function simulateResendOtp() {
+      showAlert('New 6-digit WhatsApp OTP dispatched via Gateway Beta to linked phone.', 'info');
+      document.getElementById('otp-input').value = Math.floor(100000 + Math.random() * 900000);
+    }
+
+    // Finish login transition
+    function loginSuccess() {
+      showAlert('Authentication Successful! Initializing Bharat Web Solutions Control Center session...', 'success');
+      const btn = document.getElementById('btn-login');
+      btn.innerHTML = '✓ Access Granted! Redirecting...';
+      btn.style.background = 'var(--accent-success)';
+      btn.style.color = '#ffffff';
+
+      setTimeout(() => {
+        window.location.href = 'index.html#orchestration';
+      }, 1200);
+    }
+
+    // Toggle Hindi / English language UI
+    function toggleLanguage() {
+      isHindi = !isHindi;
+      const btn = document.getElementById('lang-btn');
+      const title = document.getElementById('auth-title-text');
+      const sub = document.getElementById('auth-sub-text');
+      const topBanner = document.getElementById('portal-top-banner');
+      const lblTier = document.getElementById('lbl-tier');
+      const lblId = document.getElementById('lbl-id');
+      const lblPwd = document.getElementById('lbl-pwd');
+      const btnLogin = document.getElementById('btn-login');
+
+      if (isHindi) {
+        btn.innerText = 'English / हिन्दी';
+        title.innerText = 'आधिकारिक क्लाइंट पोर्टल लॉगिन';
+        sub.innerText = 'अपने मल्टी-गेटवे व्हाट्सएप एपीआई कंसोल, टोकन और बिलिंग को एक्सेस करें';
+        topBanner.innerText = 'राष्ट्रीय सुरक्षित प्रमाणीकरण गेटवे | भारत वेब सॉल्यूशंस';
+        lblTier.innerText = 'खाता वर्गीकरण';
+        lblId.innerText = 'क्लाइंट आईडी / पंजीकृत मोबाइल / ईमेल';
+        lblPwd.innerText = 'खाता एक्सेस कुंजी / पासवर्ड';
+        btnLogin.innerText = '🔐 सुरक्षित क्लाइंट साइन इन';
+      } else {
+        btn.innerText = 'हिन्दी / English';
+        title.innerText = 'Official Client Portal Login';
+        sub.innerText = 'Access your Multi-Gateway WhatsApp API Console, API Tokens, Webhooks, and Billing';
+        topBanner.innerText = 'भारत सरकार क्लाउड मानकों के अनुरूप | Enterprise WhatsApp API Infrastructure';
+        lblTier.innerText = 'Account Classification';
+        lblId.innerText = 'Client ID / Registered Mobile / Email';
+        lblPwd.innerText = 'Account Access Key / Password';
+        btnLogin.innerText = '🔐 Secure Client Sign In';
+      }
+    }
+
+    // Init captcha on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      generateCaptcha();
+    });
+  </script>
+</body>
+</html>
