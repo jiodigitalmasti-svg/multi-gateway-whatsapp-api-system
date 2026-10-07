@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bharat Web Solutions | Multi-Gateway WhatsApp API Cloud Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Enterprise & Government Portal Header -->
+  <div class="bws-topbar">
+    <div class="bws-topbar-content">
+      <div class="bws-topbar-left">
+        <span class="gov-badge-seal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+          GOVT-TECH STANDARDS
+        </span>
+        <span>भारत सरकार क्लाउड मानकों के अनुरूप | Enterprise WhatsApp API Infrastructure</span>
+      </div>
+      <div class="bws-topbar-right">
+        <span>ISO 27001:2022 Certified</span>
+        <span>•</span>
+        <span>cPanel & Dual-Engine Architecture</span>
+        <span>•</span>
+        <span style="color: var(--accent-success); font-weight: 600;">● Cloud Grid Live</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="bws-header">
+    <div class="bws-header-inner">
+      <a href="index.html" class="bws-logo-group">
+        <div class="bws-logo-emblem">
+          <svg viewBox="0 0 48 48" fill="none">
+            <!-- Outer Shield -->
+            <path d="M24 4L7 11.5v13.8c0 10.9 7.3 21.1 17 23.7 9.7-2.6 17-12.8 17-23.7V11.5L24 4z" fill="#0E2344" stroke="#F58220" stroke-width="2"/>
+            <!-- Chakra Motif / Sun rays -->
+            <circle cx="24" cy="23" r="10.5" stroke="#3B82F6" stroke-width="1.8" stroke-dasharray="2 2"/>
+            <circle cx="24" cy="23" r="4.5" fill="#F58220"/>
+            <!-- WhatsApp Chat Glyph Inside -->
+            <path d="M24 16c-3.9 0-7 3.1-7 7 0 1.3.4 2.5 1 3.5L17 30l3.7-1c1 .5 2.1.8 3.3.8 3.9 0 7-3.1 7-7s-3.1-6.8-7-6.8z" fill="#10B981" opacity="0.9"/>
+            <path d="M22.5 21.2c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.2.2 1.8 2.8 4.4 3.8 2.1.9 2.6.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.4s-1.8-.9-2-.9c-.3 0-.5.1-.7.4-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3z" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="bws-brand-text">
+          <h1>Bharat Web Solutions</h1>
+          <p>National Multi-Gateway WhatsApp API Cloud</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav & Auth Links -->
+      <nav class="bws-nav-links">
+        <a href="#services" class="bws-nav-anchor">API Services</a>
+        <a href="#orchestration" class="bws-nav-anchor">Live Gateways</a>
+        <a href="#sandbox" class="bws-nav-anchor">API Playground</a>
+        <a href="#cpanel-docs" class="bws-nav-anchor">cPanel Microservices</a>
+      </nav>
+
+      <!-- Prominent Client Login & Registration Buttons -->
+      <div class="bws-auth-actions">
+        <a href="login.html" class="bws-nav-btn bws-nav-btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          Client Login
+        </a>
+        <a href="register.html" class="bws-nav-btn bws-nav-btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <line x1="20" y1="8" x2="20" y2="14"></line>
+            <line x1="23" y1="11" x2="17" y2="11"></line>
+          </svg>
+          Sign Up / Onboard
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Quick Action Strip -->
+  <div class="mobile-auth-strip">
+    <a href="login.html" class="btn btn-primary" style="flex: 1; padding: 10px; font-size: 0.9rem;">
+      🔐 Secure Client Login
+    </a>
+    <a href="register.html" class="btn btn-secondary" style="flex: 1; padding: 10px; font-size: 0.9rem;">
+      ✍️ Register Account
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span>PRODUCTION-GRADE MULTI-TENANT ENGINE • DUAL NODE &amp; PHP HYBRID</span>
+      </div>
+      <h2 class="hero-title">
+        Enterprise Multi-Gateway WhatsApp Messaging Infrastructure for <span class="highlight-saffron">Bharat</span>
+      </h2>
+      <p class="hero-description">
+        Engineered specifically for cPanel shared hosts, dedicated VPS, and enterprise Indian enterprises. Zero third-party dependency, instant multi-session Baileys failover, RESTful webhooks, and sub-second OTP routing.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="login.html" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+            <polyline points="10 17 15 12 10 7"></polyline>
+            <line x1="15" y1="12" x2="3" y2="12"></line>
+          </svg>
+          Access Client Dashboard
+        </a>
+        <a href="#sandbox" class="btn btn-secondary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Live API Sandbox
+        </a>
+        <a href="register.html" class="btn btn-outline btn-lg">
+          Get Instant API Key
+        </a>
+      </div>
+
+      <!-- Trust Badges Bar -->
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-num">99.98%</div>
+          <div class="trust-label">High-Uptime Multi-Session SLA</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">&lt; 1.2s</div>
+          <div class="trust-label">Sub-Second Priority OTP Latency</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">4x Parallel</div>
+          <div class="trust-label">Active Gateways Per Instance</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-num">cPanel Ready</div>
+          <div class="trust-label">Native Node.js &amp; PHP 8.x Engine</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: WHATSAPP API SERVICES SHOWCASE -->
+  <section id="services" class="section-container">
+    <div class="section-header">
+      <div class="gov-badge-seal" style="margin-bottom: 8px;">CORE CAPABILITIES</div>
+      <h3 class="section-title">Comprehensive WhatsApp Business &amp; API Services</h3>
+      <p class="section-subtitle">
+        High-throughput communication modules built by Bharat Web Solutions for government entities, fintechs, e-commerce, and high-volume developers.
+      </p>
+    </div>
+
+    <div class="bws-services-grid">
+      <!-- Service 1: OTP & 2FA Engine -->
+      <div class="bws-service-card">
+        <div class="service-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F58220" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            <circle cx="12" cy="16" r="1.5" fill="#F58220"></circle>
+          </svg>
+        </div>
+        <div class="service-badge-pill">High-Priority</div>
+        <h4 class="service-title">Mission-Critical OTP &amp; 2FA Dispatch</h4>
+        <p class="service-desc">
+          Automated multi-carrier routing for login OTPs, banking verifications, and transactional alerts with immediate failover to standby gateways within 400ms.
+        </p>
+        <ul class="service-features-list">
+          <li>Dynamic dynamic session failover</li>
+          <li>Encrypted token payload validation</li>
+          <li>Delivery confirmation &amp; read receipts</li>
+        </ul>
+      </div>
+
+      <!-- Service 2: Two-Way Chatbot & Grievance Portal -->
+      <div class="bws-service-card">
+        <div class="service-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            <circle cx="9" cy="10" r="1" fill="#10B981"></circle>
+            <circle cx="15" cy="10" r="1" fill="#10B981"></circle>
+            <path d="M9.5 13.5a3.5 3.5 0 0 0 5 0"></path>
+          </svg>
+        </div>
+        <div class="service-badge-pill">Automated Flows</div>
+        <h4 class="service-title">Interactive Two-Way Webhook Bots</h4>
+        <p class="service-desc">
+          Receive inbound messages via native `webhook.php` listener, parse natural language customer inquiries, and respond instantly with interactive buttons and menus.
+        </p>
+        <ul class="service-features-list">
+          <li>Real-time JSON webhook dispatch</li>
+          <li>Customer grievance ticket registration</li>
+          <li>Auto-reply flow state management</li>
+        </ul>
+      </div>
+
+      <!-- Service 3: Multi-Lingual Enterprise Broadcasts -->
+      <div class="bws-service-card">
+        <div class="service-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </div>
+        <div class="service-badge-pill">12+ Indian Languages</div>
+        <h4 class="service-title">Multi-Lingual Broadcasts &amp; Alerts</h4>
+        <p class="service-desc">
+          Broadcast citizen advisories, utility payment reminders, and transaction receipts rendered cleanly in Hindi, Tamil, Telugu, Bengali, Marathi, and English.
+        </p>
+        <ul class="service-features-list">
+          <li>Full UTF-8 / Indian regional script support</li>
+          <li>Intelligent burst rate limiter defense</li>
+          <li>Batch campaign queue monitoring</li>
+        </ul>
+      </div>
+
+      <!-- Service 4: Automated Media & Document Dispatch -->
+      <div class="bws-service-card">
+        <div class="service-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F58220" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        </div>
+        <div class="service-badge-pill">PDF &amp; Media API</div>
+        <h4 class="service-title">Challan, Invoices &amp; PDF Receipts</h4>
+        <p class="service-desc">
+          Instantly dispatch digitally generated tax receipts, invoices, e-challans, and lab reports directly to client WhatsApp numbers via unified REST endpoint.
+        </p>
+        <ul class="service-features-list">
+          <li>Direct base64 &amp; public URL ingestion</li>
+          <li>Automatic file compression &amp; mime detection</li>
+          <li>Cloud storage retention controls</li>
+        </ul>
+      </div>
+
+      <!-- Service 5: Multi-Gateway Load Balancer -->
+      <div class="bws-service-card">
+        <div class="service-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+        </div>
+        <div class="service-badge-pill">Smart Routing</div>
+        <h4 class="service-title">Dynamic Multi-Session Load Balancer</h4>
+        <p class="service-desc">
+          Balance high message volume across Gateway Alpha, Beta, Gamma, and Delta instances. If one SIM disconnects, messages reroute automatically without drop.
+        </p>
+        <ul class="service-features-list">
+          <li>Round-Robin and priority weighted routing</li>
+          <li>Auto-reconnection socket watchdog</li>
+          <li>Per-gateway throughput throttling</li>
+        </ul>
+      </div>
+
+      <!-- Service 6: cPanel Native Integration -->
+      <div class="bws-service-card">
+        <div class="service-icon-box">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2">
+            <path d="M4 17l6-6-6-6M12 19h8"></path>
+          </svg>
+        </div>
+        <div class="service-badge-pill">cPanel &amp; Cloud</div>
+        <h4 class="service-title">1-Click cPanel &amp; PHP Microservices</h4>
+        <p class="service-desc">
+          Plug-and-play PHP 8.2 wrappers (`whatsapp.php`) compatible with standard cPanel shared hosting, Apache, Nginx, and LiteSpeed with cron automation.
+        </p>
+        <ul class="service-features-list">
+          <li>Node.js selector setup in minutes</li>
+          <li>PHP cURL microservice SDK included</li>
+          <li>Full compatibility with MySQL/MariaDB</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: LIVE MULTI-GATEWAY ORCHESTRATION & DASHBOARD -->
+  <section id="orchestration" class="section-container" style="background: rgba(14, 35, 68, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 48px 20px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 28px;">
+        <div>
+          <div class="gov-badge-seal" style="margin-bottom: 8px;">LIVE SYSTEM STATUS</div>
+          <h3 class="section-title" style="margin-bottom: 6px;">Multi-Gateway Live Orchestration Panel</h3>
+          <p class="section-subtitle" style="margin-bottom: 0;">
+            Monitor socket states, dispatch load, and gateway operational health in real-time.
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-primary" onclick="simulateGatewayHealthCheck()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
+            Refresh All Gateways
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Dashboard Metric Cards -->
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-header">
+            <span>Cluster Status</span>
+            <span style="color: var(--accent-success);">●</span>
+          </div>
+          <div class="stat-value" id="stat-server-status" style="color: var(--accent-success);">ONLINE</div>
+          <div class="stat-footer">cPanel Node v18.x / PHP 8.2 Engine</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-header">
+            <span>Active Clients</span>
+            <span>👥</span>
+          </div>
+          <div class="stat-value" id="stat-live-users">48</div>
+          <div class="stat-footer">Enterprise sessions authenticated</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-header">
+            <span>Active Gateways</span>
+            <span>🔗</span>
+          </div>
+          <div class="stat-value" id="stat-connected-users">3 / 4</div>
+          <div class="stat-footer">Alpha, Beta, Delta live; Gamma standby</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-header">
+            <span>Sent Today</span>
+            <span style="color: #60a5fa;">🚀</span>
+          </div>
+          <div class="stat-value" id="stat-sent-count">14,920</div>
+          <div class="stat-footer">Multi-channel dispatched</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-header">
+            <span>Delivered</span>
+            <span style="color: var(--accent-success);">✓✓</span>
+          </div>
+          <div class="stat-value" id="stat-delivered-count" style="color: var(--accent-success);">14,834</div>
+          <div class="stat-footer">99.4% first-attempt success rate</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-header">
+            <span>Avg Queue Latency</span>
+            <span style="color: var(--accent-saffron);">⚡</span>
+          </div>
+          <div class="stat-value" id="stat-latency" style="color: var(--accent-saffron);">380ms</div>
+          <div class="stat-footer">Sub-second priority handling</div>
+        </div>
+      </div>
+
+      <!-- Gateways List Grid -->
+      <div class="gateways-grid" id="gateways-container">
+        <!-- Dynamically rendered via JS -->
+      </div>
+
+      <!-- Two column panel: QR Linker Simulator & Health Stream -->
+      <div class="grid-2" style="margin-top: 24px;">
+        
+        <!-- Live QR Scanner Simulator -->
+        <div class="card">
+          <div class="card-title">
+            <span>🔗 Instant QR Device Linker</span>
+            <span class="badge" id="qr-target-badge">Target: Gateway Alpha</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 16px;">
+            Pair new physical WhatsApp numbers or renew cryptographic sessions. Select an unauthenticated gateway to display authorization QR.
+          </p>
+          
+          <div id="qr-panel" style="background: rgba(8, 19, 37, 0.7); border: 1px dashed var(--border-color); border-radius: var(--radius-md); padding: 24px; text-align: center;">
+            <p style="color: var(--text-secondary); margin-bottom: 14px; font-size: 0.9rem;">
+              Click below to initiate cryptographic session handshake for selected gateway:
+            </p>
+            <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px;">
+              <button class="btn btn-outline" onclick="selectGatewayForQR('gw-alpha')">Gateway Alpha</button>
+              <button class="btn btn-outline" onclick="selectGatewayForQR('gw-gamma')">Gateway Gamma (Standby)</button>
+              <button class="btn btn-outline" onclick="selectGatewayForQR('gw-delta')">Gateway Delta</button>
+            </div>
+            <button class="btn btn-primary" onclick="simulateGenerateQR()">
+              ⚡ Generate Secure WhatsApp QR
+            </button>
+            <div id="qr-display-box" style="margin-top: 20px; display: none;">
+              <!-- QR SVG Mock -->
+              <div style="background: #ffffff; padding: 16px; border-radius: 8px; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.4);">
+                <svg width="150" height="150" viewBox="0 0 100 100">
+                  <rect width="100" height="100" fill="#ffffff"/>
+                  <rect x="10" y="10" width="30" height="30" fill="#000000"/>
+                  <rect x="15" y="15" width="20" height="20" fill="#ffffff"/>
+                  <rect x="20" y="20" width="10" height="10" fill="#000000"/>
+                  
+                  <rect x="60" y="10" width="30" height="30" fill="#000000"/>
+                  <rect x="65" y="15" width="20" height="20" fill="#ffffff"/>
+                  <rect x="70" y="20" width="10" height="10" fill="#000000"/>
+
+                  <rect x="10" y="60" width="30" height="30" fill="#000000"/>
+                  <rect x="15" y="65" width="20" height="20" fill="#ffffff"/>
+                  <rect x="20" y="70" width="10" height="10" fill="#000000"/>
+
+                  <rect x="45" y="20" width="8" height="8" fill="#000000"/>
+                  <rect x="50" y="40" width="15" height="15" fill="#000000"/>
+                  <rect x="70" y="60" width="20" height="10" fill="#000000"/>
+                  <rect x="45" y="70" width="10" height="15" fill="#000000"/>
+                  <circle cx="50" cy="50" r="5" fill="#10B981"/>
+                </svg>
+              </div>
+              <p style="color: var(--accent-success); font-size: 0.85rem; margin-top: 10px; font-weight: 500;">
+                Scan with Linked Devices on WhatsApp Business / Personal App
+              </p>
+              <button class="btn btn-secondary" style="margin-top: 10px;" onclick="simulateAuthorize()">
+                Simulate Successful Mobile Scan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real-time Cluster Activity Stream -->
+        <div class="card">
+          <div class="card-title">
+            <span>📡 Cluster Event Stream</span>
+            <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-success);">Live Socket</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 12px;">
+            Microservice socket events dispatched across Node.js supervisor and cPanel hooks.
+          </p>
+          <div id="activity-log" style="background: #050E1F; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; font-family: monospace; font-size: 0.82rem; height: 260px; overflow-y: auto; color: #cbd5e1; line-height: 1.6;">
+            <div><span style="color: var(--text-secondary);">[10:14:02]</span> <span style="color: var(--accent-success);">[SYSTEM]</span> Bharat Web Solutions Node cluster initialized on port 3000.</div>
+            <div><span style="color: var(--text-secondary);">[10:14:05]</span> <span style="color: var(--accent-saffron);">[BALANCER]</span> Session Gateway Alpha (919876500001) online and connected.</div>
+            <div><span style="color: var(--text-secondary);">[10:14:06]</span> <span style="color: var(--accent-saffron);">[BALANCER]</span> Session Gateway Beta (919876500002) online and connected.</div>
+            <div><span style="color: var(--text-secondary);">[10:14:08]</span> <span style="color: #60a5fa;">[ROUTER]</span> Dynamic round-robin pool active across active nodes.</div>
+            <div><span style="color: var(--text-secondary);">[10:14:15]</span> <span style="color: var(--accent-success);">[WEBHOOK]</span> Inbound webhook listener active at /webhook.php (PHP 8.2).</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION: INTERACTIVE API PLAYGROUND / SANDBOX -->
+  <section id="sandbox" class="section-container">
+    <div class="section-header">
+      <div class="gov-badge-seal" style="margin-bottom: 8px;">DEVELOPER CONSOLE</div>
+      <h3 class="section-title">Interactive WhatsApp API Sandbox</h3>
+      <p class="section-subtitle">
+        Test high-speed outbound WhatsApp dispatch directly from your browser. Dispatches via local simulated Gateway microservices.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <!-- API Request Form -->
+      <div class="card">
+        <div class="card-title">
+          <span>📤 Send WhatsApp Payload</span>
+          <span class="badge" style="background: rgba(245, 130, 32, 0.15); color: var(--accent-saffron);">POST /api/message/send</span>
+        </div>
+        
+        <form id="api-test-form" onsubmit="event.preventDefault(); sendApiTestMessage();">
+          <div class="form-group">
+            <label class="form-label" for="api-gateway-select">Target Dispatch Gateway</label>
+            <select class="form-control" id="api-gateway-select">
+              <option value="gw-alpha">Gateway Alpha (High-Priority Port 3001)</option>
+              <option value="gw-beta">Gateway Beta (Transactional Port 3002)</option>
+              <option value="gw-delta">Gateway Delta (Govt Utility Dispatch Port 3004)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="api-recipient-number">Recipient Mobile Number (with Country Code)</label>
+            <input type="text" class="form-control" id="api-recipient-number" value="+91 98765 43210" placeholder="+91 98XXXXXXXX">
+            <div class="form-hint">Supports Indian mobile numbers (+91) and international formats.</div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="api-msg-type">Payload Template Type</label>
+            <select class="form-control" id="api-msg-type" onchange="updatePayloadTemplate()">
+              <option value="otp">Standard 2FA Verification OTP</option>
+              <option value="alert">National Public Advisory Alert</option>
+              <option value="invoice">E-Challan / Tax Invoice Receipt</option>
+              <option value="custom">Custom Plain Text Message</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="api-message-content">Message Content / JSON Variables</label>
+            <textarea class="form-control" id="api-message-content" rows="4">नमस्ते! Bharat Web Solutions verification code is 842915. Valid for 5 minutes. Do not share your OTP with anyone. Ref: BWS-IND-7782</textarea>
+          </div>
+
+          <div style="display: flex; gap: 12px; align-items: center; margin-top: 18px;">
+            <button type="submit" class="btn btn-primary" id="btn-send-api" style="flex: 1;">
+              🚀 Execute API Dispatch
+            </button>
+            <button type="button" class="btn btn-secondary" onclick="resetApiForm()">
+              Clear
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Real-time JSON API Response Terminal -->
+      <div class="card">
+        <div class="card-title">
+          <span>📥 Microservice JSON Response</span>
+          <span class="badge" id="response-status-badge">200 OK • HTTP/2</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
+          Synchronous response from Bharat Web Solutions microservice gateway router.
+        </p>
+
+        <div id="api-json-terminal" style="background: #040A17; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 16px; font-family: monospace; font-size: 0.85rem; height: 320px; overflow-y: auto; color: #a5f3fc; line-height: 1.5; white-space: pre-wrap;">
+{
+  "success": true,
+  "gateway": "gw-alpha",
+  "status": "idle",
+  "message": "Enter your payload parameters on the left and click 'Execute API Dispatch' to trigger simulated gateway call.",
+  "timestamp": "2025-05-18T10:30:00.000Z",
+  "metrics": {
+    "round_trip_latency_ms": 0,
+    "carrier_network": "BWS-SECURE-NODE",
+    "encoding": "UTF-8"
+  }
+}
+        </div>
+
+        <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 0.82rem; color: var(--text-secondary);">cPanel Endpoint: <code>/api/message/send</code></span>
+          <button class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;" onclick="copyResponseTerminal()">
+            📋 Copy JSON
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: CPANEL & NODE.JS MICROSERVICE CODE / DEPLOYMENT GUIDE -->
+  <section id="cpanel-docs" class="section-container" style="border-top: 1px solid var(--border-color); padding: 48px 20px;">
+    <div class="section-header">
+      <div class="gov-badge-seal" style="margin-bottom: 8px;">DEVELOPER INTEGRATION</div>
+      <h3 class="section-title">cPanel Deployment &amp; Dual-Engine Microservices</h3>
+      <p class="section-subtitle">
+        How Bharat Web Solutions bridges cPanel shared environments with high-performance Node.js socket backends.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <!-- Architectural Steps -->
+      <div class="card">
+        <div class="card-title">cPanel Setup Checklist</div>
+        <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 12px;">
+          
+          <div style="display: flex; gap: 12px;">
+            <div style="background: rgba(245, 130, 32, 0.2); color: var(--accent-saffron); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+            <div>
+              <strong style="color: var(--text-primary); font-size: 0.95rem;">Node.js Application Manager</strong>
+              <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px;">
+                Open cPanel &gt; "Setup Node.js App". Select Node v18+, upload <code>gateway.js</code>, and run <code>npm install</code>.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px;">
+            <div style="background: rgba(16, 185, 129, 0.2); color: var(--accent-success); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+            <div>
+              <strong style="color: var(--text-primary); font-size: 0.95rem;">Deploy PHP Client Microservice</strong>
+              <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px;">
+                Place <code>whatsapp.php</code> in your <code>public_html/api/</code> folder. Set <code>$NODE_GATEWAY_URL</code> to your local proxy port.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px;">
+            <div style="background: rgba(59, 130, 246, 0.2); color: #60a5fa; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+            <div>
+              <strong style="color: var(--text-primary); font-size: 0.95rem;">Configure Inbound Webhook Listener</strong>
+              <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px;">
+                Use <code>webhook.php</code> to capture inbound messages, status read receipts, and send automated transactional responses.
+              </p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px;">
+            <div style="background: rgba(245, 130, 32, 0.2); color: var(--accent-saffron); width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+            <div>
+              <strong style="color: var(--text-primary); font-size: 0.95rem;">Multi-Gateway Round Robin</strong>
+              <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px;">
+                Assign separate SIMs to ports 3001, 3002, 3003, and 3004. High-traffic queues route automatically without throttling.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Code Snippet (PHP + cURL) -->
+      <div class="card">
+        <div class="card-title">
+          <span>⚡ PHP SDK Integration (`whatsapp.php`)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-success);">PHP 8.x Compatible</span>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
+          Call your WhatsApp microservice with native PHP cURL inside any WordPress, Laravel, or custom cPanel project:
+        </p>
+
+        <pre style="background: #040A17; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 14px; font-family: monospace; font-size: 0.82rem; color: #93c5fd; overflow-x: auto; line-height: 1.5;"><code>&lt;?php
+// Include Bharat Web Solutions WhatsApp API SDK
+require_once __DIR__ . '/whatsapp.php';
+
+$client = new BWSWhatsAppAPI([
+    'gateway_url' =&gt; 'http://127.0.0.1:3000',
+    'api_key'     =&gt; 'BWS_LIVE_KEY_84920491',
+    'gateway_id'  =&gt; 'gw-alpha' // Alpha, Beta, Gamma
+]);
+
+$response = $client-&gt;sendMessage([
+    'to'      =&gt; '919876543210',
+    'message' =&gt; 'OTP: 842915 is your Bharat Web Solutions code.'
+]);
+
+if ($response['success']) {
+    echo "Dispatched Message ID: " . $response['messageId'];
+}
+?&gt;</code></pre>
+
+        <div style="margin-top: 14px; display: flex; gap: 10px;">
+          <a href="login.html" class="btn btn-primary" style="flex: 1; text-align: center;">
+            🔐 Open Developer Portal
+          </a>
+          <a href="register.html" class="btn btn-secondary" style="flex: 1; text-align: center;">
+            Generate Free Sandbox Key
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section style="background: linear-gradient(135deg, #091830 0%, #112F5E 100%); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 50px 20px; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="gov-badge-seal" style="margin-bottom: 12px;">HIGH-CONCURRENCY MESSAGING CLOUD</div>
+      <h3 style="font-size: clamp(24px, 4vw, 36px); font-weight: 700; color: #ffffff; margin-bottom: 14px;">
+        Ready to Power Your WhatsApp Communications with Bharat Web Solutions?
+      </h3>
+      <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6; margin-bottom: 24px;">
+        Join over 1,200+ Indian public agencies, educational institutes, and fintech enterprises using our enterprise-grade multi-gateway infrastructure.
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="register.html" class="btn btn-primary btn-lg">
+          🚀 Create Enterprise Account
+        </a>
+        <a href="login.html" class="btn btn-secondary btn-lg">
+          🔐 Existing Client Login
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Official Footer -->
+  <footer class="bws-footer">
+    <div class="bws-footer-inner">
+      <div class="bws-footer-grid">
+        
+        <!-- Brand Info -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+            <div style="width: 32px; height: 32px; background: #0F274A; border: 1px solid var(--accent-saffron); border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F58220" stroke-width="2">
+                <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+              </svg>
+            </div>
+            <strong style="color: #ffffff; font-size: 1.1rem;">Bharat Web Solutions</strong>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 14px;">
+            National Multi-Gateway WhatsApp API Cloud. Engineered for cPanel, VPS, and cloud-native microservices with data-localization compliance in India.
+          </p>
+          <div style="font-size: 0.82rem; color: var(--accent-success);">
+            ● All Gateway Clusters Operational (ISO 27001 Certified)
+          </div>
+        </div>
+
+        <!-- Quick Portal Links -->
+        <div>
+          <h4 style="color: #ffffff; font-size: 0.95rem; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Portal Navigation</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <li><a href="login.html" style="color: var(--text-secondary); text-decoration: none;">Client Login Portal</a></li>
+            <li><a href="register.html" style="color: var(--text-secondary); text-decoration: none;">Register New Developer Account</a></li>
+            <li><a href="forgot-password.html" style="color: var(--text-secondary); text-decoration: none;">Official Account Recovery</a></li>
+            <li><a href="#services" style="color: var(--text-secondary); text-decoration: none;">WhatsApp API Solutions</a></li>
+            <li><a href="#sandbox" style="color: var(--text-secondary); text-decoration: none;">Live API Playground</a></li>
+          </ul>
+        </div>
+
+        <!-- Compliance & Gateways -->
+        <div>
+          <h4 style="color: #ffffff; font-size: 0.95rem; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Active Clusters</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <li style="color: var(--text-secondary);">Gateway Alpha: <span style="color: var(--accent-success);">Active (Port 3001)</span></li>
+            <li style="color: var(--text-secondary);">Gateway Beta: <span style="color: var(--accent-success);">Active (Port 3002)</span></li>
+            <li style="color: var(--text-secondary);">Gateway Gamma: <span style="color: var(--accent-saffron);">Standby (Port 3003)</span></li>
+            <li style="color: var(--text-secondary);">Gateway Delta: <span style="color: var(--accent-success);">Active (Port 3004)</span></li>
+            <li style="color: var(--text-secondary);">PHP Webhook Listener: <span style="color: var(--accent-success);">Live 8.2</span></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Helpdesk -->
+        <div>
+          <h4 style="color: #ffffff; font-size: 0.95rem; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px;">Official Support</h4>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin-bottom: 8px;">
+            Bharat Web Solutions Technical Operations Center
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 4px;">
+            <strong>Helpline:</strong> +91 (011) 2800-BWS
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 12px;">
+            <strong>Support:</strong> support@bharatwebsolutions.in
+          </p>
+          <div style="font-size: 0.78rem; color: #94a3b8;">
+            Complies with MeitY IT Act 2000 &amp; Digital Personal Data Protection Act 2023.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="bws-footer-bottom">
+        <div>
+          &copy; 2025 Bharat Web Solutions Private Limited. All Rights Reserved.
+        </div>
+        <div style="display: flex; gap: 16px;">
+          <a href="login.html" style="color: var(--text-secondary); text-decoration: none;">Client Login</a>
+          <a href="register.html" style="color: var(--text-secondary); text-decoration: none;">Register</a>
+          <a href="forgot-password.html" style="color: var(--text-secondary); text-decoration: none;">Recovery</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Interaction Scripts -->
+  <script>
+    // State management for simulated multi-gateway cluster
+    const gatewayCluster = [
+      { id: 'gw-alpha', name: 'Gateway Alpha (Priority OTP)', phone: '+91 98765 00001', port: 3001, status: 'connected', load: '14%', battery: '98%', sent: '6,420' },
+      { id: 'gw-beta',  name: 'Gateway Beta (Transactional)',  phone: '+91 98765 00002', port: 3002, status: 'connected', load: '32%', battery: '85%', sent: '5,180' },
+      { id: 'gw-gamma', name: 'Gateway Gamma (Broadcast)',    phone: 'Not Linked',       port: 3003, status: 'standby',   load: '0%',  battery: '100%', sent: '0' },
+      { id: 'gw-delta', name: 'Gateway Delta (Govt Utility)', phone: '+91 98765 00004', port: 3004, status: 'connected', load: '19%', battery: '92%', sent: '3,320' }
+    ];
+
+    let selectedGatewayForQR = 'gw-gamma';
+
+    // Render Gateways into DOM
+    function renderGateways() {
+      const container = document.getElementById('gateways-container');
+      if (!container) return;
+
+      container.innerHTML = gatewayCluster.map(gw => {
+        const isOnline = gw.status === 'connected';
+        return `
+          <div class="gateway-card ${isOnline ? 'gateway-active' : ''}">
+            <div class="gateway-header">
+              <div>
+                <strong style="color: var(--text-primary); font-size: 1rem;">${gw.name}</strong>
+                <div style="font-size: 0.8rem; color: var(--text-secondary);">cPanel Port: ${gw.port} • ID: ${gw.id}</div>
+              </div>
+              <span class="badge ${isOnline ? 'badge-success' : 'badge-warning'}">
+                ${isOnline ? '● CONNECTED' : '○ STANDBY'}
+              </span>
+            </div>
+            
+            <div class="gateway-meta">
+              <div><strong>SIM Phone:</strong> ${gw.phone}</div>
+              <div><strong>Queue Load:</strong> ${gw.load}</div>
+              <div><strong>Device Battery:</strong> ${gw.battery}</div>
+              <div><strong>Dispatched:</strong> ${gw.sent} msgs</div>
+            </div>
+
+            <div style="margin-top: 14px; display: flex; gap: 8px;">
+              ${isOnline ? `
+                <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; flex: 1;" onclick="testPingGateway('${gw.id}')">
+                  ⚡ Ping Test
+                </button>
+                <button class="btn btn-outline" style="padding: 6px 12px; font-size: 0.8rem;" onclick="disconnectGateway('${gw.id}')">
+                  Disconnect
+                </button>
+              ` : `
+                <button class="btn btn-primary" style="padding: 6px 12px; font-size: 0.8rem; flex: 1;" onclick="selectGatewayForQR('${gw.id}'); simulateGenerateQR();">
+                  🔗 Link via QR Code
+                </button>
+              `}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Update counters
+      const activeCount = gatewayCluster.filter(g => g.status === 'connected').length;
+      const countEl = document.getElementById('stat-connected-users');
+      if (countEl) countEl.innerText = `${activeCount} / ${gatewayCluster.length}`;
+    }
+
+    // Health check all gateways
+    function simulateGatewayHealthCheck() {
+      logClusterEvent('HEALTH', 'Running cryptographic socket health check on all 4 microservices...');
+      const btn = event.target;
+      const origText = btn.innerHTML;
+      btn.innerHTML = 'Testing...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        gatewayCluster.forEach(gw => {
+          if (gw.status === 'connected') {
+            logClusterEvent('HEALTH', `${gw.name} (Port ${gw.port}) responded 200 OK within 12ms.`);
+          }
+        });
+        btn.innerHTML = origText;
+        btn.disabled = false;
+        renderGateways();
+      }, 700);
+    }
+
+    // Select gateway for QR code pairing
+    function selectGatewayForQR(gwId) {
+      selectedGatewayForQR = gwId;
+      const badge = document.getElementById('qr-target-badge');
+      const target = gatewayCluster.find(g => g.id === gwId);
+      if (badge && target) {
+        badge.innerText = `Target: ${target.name}`;
+      }
+      logClusterEvent('QR', `Selected ${target ? target.name : gwId} for QR device linking handshake.`);
+    }
+
+    // Generate QR simulation
+    function simulateGenerateQR() {
+      const qrDisplay = document.getElementById('qr-display-box');
+      if (qrDisplay) {
+        qrDisplay.style.display = 'block';
+        logClusterEvent('QR', `Generated base64 security token for ${selectedGatewayForQR}. Waiting for WhatsApp scan.`);
+      }
+    }
+
+    // Simulate mobile scan authorization
+    function simulateAuthorize() {
+      const target = gatewayCluster.find(g => g.id === selectedGatewayForQR);
+      if (target) {
+        target.status = 'connected';
+        target.phone = target.phone === 'Not Linked' ? '+91 98765 00003' : target.phone;
+        renderGateways();
+        logClusterEvent('AUTH', `Session ${target.name} successfully paired and authenticated!`);
+        alert(`Success: ${target.name} is now connected and operational on Port ${target.port}.`);
+        const qrDisplay = document.getElementById('qr-display-box');
+        if (qrDisplay) qrDisplay.style.display = 'none';
+      }
+    }
+
+    // Ping test
+    function testPingGateway(gwId) {
+      const gw = gatewayCluster.find(g => g.id === gwId);
+      const pingMs = Math.floor(Math.random() * 25) + 8;
+      logClusterEvent('PING', `Ping ${gw.name} (Port ${gw.port}): Round-trip ${pingMs}ms. Status: HEALTHY.`);
+      alert(`[${gw.name}] Ping response: ${pingMs}ms\nState: Fully Synchronized\nSocket Port: ${gw.port}`);
+    }
+
+    // Disconnect gateway
+    function disconnectGateway(gwId) {
+      const gw = gatewayCluster.find(g => g.id === gwId);
+      if (gw) {
+        gw.status = 'standby';
+        renderGateways();
+        logClusterEvent('GATEWAY', `${gw.name} disconnected. Switched to standby state.`);
+      }
+    }
+
+    // Log event to cluster terminal
+    function logClusterEvent(tag, message) {
+      const logBox = document.getElementById('activity-log');
+      if (!logBox) return;
+
+      const time = new Date().toTimeString().split(' ')[0];
+      const div = document.createElement('div');
+      div.innerHTML = `<span style="color: var(--text-secondary);">[${time}]</span> <span style="color: var(--accent-saffron);">[${tag}]</span> ${message}`;
+      logBox.appendChild(div);
+      logBox.scrollTop = logBox.scrollHeight;
+    }
+
+    // Update message template selector in sandbox
+    function updatePayloadTemplate() {
+      const type = document.getElementById('api-msg-type').value;
+      const content = document.getElementById('api-message-content');
+      if (!content) return;
+
+      if (type === 'otp') {
+        content.value = 'नमस्ते! Bharat Web Solutions verification code is 842915. Valid for 5 minutes. Do not share your OTP with anyone. Ref: BWS-IND-7782';
+      } else if (type === 'alert') {
+        content.value = 'GOVT ADVISORY: Bharat Web Solutions Cloud scheduled maintenance window is active tonight 02:00 - 02:30 IST. API routing remains uninterrupted via failover cluster.';
+      } else if (type === 'invoice') {
+        content.value = 'TAX INVOICE: Receipt #BWS-2025-08149 generated for INR 4,720.00. Download digitally signed PDF e-receipt: https://bws.gov.in/docs/receipt_8149.pdf';
+      } else {
+        content.value = 'Hello from Bharat Web Solutions! Multi-gateway enterprise WhatsApp API test message.';
+      }
+    }
+
+    // Send API test message
+    function sendApiTestMessage() {
+      const gateway = document.getElementById('api-gateway-select').value;
+      const recipient = document.getElementById('api-recipient-number').value.trim();
+      const message = document.getElementById('api-message-content').value.trim();
+      const terminal = document.getElementById('api-json-terminal');
+      const badge = document.getElementById('response-status-badge');
+      const sendBtn = document.getElementById('btn-send-api');
+
+      if (!recipient) {
+        alert('Please enter a recipient mobile number.');
+        return;
+      }
+
+      sendBtn.disabled = true;
+      sendBtn.innerHTML = '⚡ Dispatched...';
+
+      const latency = Math.floor(Math.random() * 150) + 120;
+      const msgId = 'BWS_' + Math.random().toString(36).substring(2, 10).toUpperCase();
+
+      setTimeout(() => {
+        const responseData = {
+          success: true,
+          status: "queued_and_sent",
+          messageId: msgId,
+          recipient: recipient,
+          gatewayId: gateway,
+          timestamp: new Date().toISOString(),
+          delivery: {
+            carrier: "BHARAT-WEB-GATEWAY-MESH",
+            latency_ms: latency,
+            http_status: 200,
+            sim_port: gateway === 'gw-alpha' ? 3001 : (gateway === 'gw-beta' ? 3002 : 3004)
+          },
+          payload_preview: message.substring(0, 60) + (message.length > 60 ? '...' : '')
+        };
+
+        if (terminal) {
+          terminal.innerText = JSON.stringify(responseData, null, 2);
+        }
+
+        if (badge) {
+          badge.innerText = `200 OK • Latency ${latency}ms`;
+          badge.style.color = '#10B981';
+        }
+
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = '🚀 Execute API Dispatch';
+
+        // Increment sent counter
+        const sentEl = document.getElementById('stat-sent-count');
+        if (sentEl) {
+          const cur = parseInt(sentEl.innerText.replace(/,/g, '')) || 14920;
+          sentEl.innerText = (cur + 1).toLocaleString();
+        }
+
+        logClusterEvent('DISPATCH', `Dispatched API payload to ${recipient} via ${gateway} (ID: ${msgId}).`);
+      }, 450);
+    }
+
+    // Reset API form
+    function resetApiForm() {
+      document.getElementById('api-recipient-number').value = '+91 ';
+      document.getElementById('api-message-content').value = '';
+    }
+
+    // Copy terminal JSON
+    function copyResponseTerminal() {
+      const terminal = document.getElementById('api-json-terminal');
+      if (terminal) {
+        navigator.clipboard.writeText(terminal.innerText).then(() => {
+          alert('Response JSON copied to clipboard!');
+        }).catch(() => {
+          alert('JSON ready in terminal.');
+        });
+      }
+    }
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderGateways();
+    });
+  </script>
+</body>
+</html>
